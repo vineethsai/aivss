@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Shield, Github, ExternalLink } from 'lucide-react';
 
@@ -20,32 +19,26 @@ export const Footer = () => {
           <div>
             <h3 className="text-white font-semibold mb-4">Resources</h3>
             <ul className="space-y-2 text-slate-400 text-sm">
-              <li><a href="#" className="hover:text-white transition-colors">Documentation</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">API Reference</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Best Practices</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Case Studies</a></li>
+              <li><a href="https://owasp.org/www-project-artificial-intelligence-vulnerability-scoring-system/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Documentation</a></li>
             </ul>
           </div>
           
           <div>
             <h3 className="text-white font-semibold mb-4">Community</h3>
             <ul className="space-y-2 text-slate-400 text-sm">
-              <li><a href="#" className="hover:text-white transition-colors flex items-center gap-1">
+              <li><a href="https://github.com/OWASP/www-project-artificial-intelligence-vulnerability-scoring-system" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors flex items-center gap-1">
                 GitHub <ExternalLink className="h-3 w-3" />
               </a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Discussions</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Contributing</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Research Papers</a></li>
+              <li><a href="https://github.com/OWASP/www-project-artificial-intelligence-vulnerability-scoring-system" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Contributing</a></li>
             </ul>
           </div>
           
           <div>
             <h3 className="text-white font-semibold mb-4">Standards</h3>
             <ul className="space-y-2 text-slate-400 text-sm">
-              <li><a href="#" className="hover:text-white transition-colors">OWASP Foundation</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">NIST Guidelines</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">ISO/IEC Standards</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Industry Partners</a></li>
+              <li><a href="https://owasp.org/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">OWASP Foundation</a></li>
+              <li><a href="https://www.nist.gov/itl/ai-risk-management-framework" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">NIST AI RMF</a></li>
+              <li><a href="https://www.iso.org/sectors/it-technologies/ai" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">ISO/IEC AI Standards</a></li>
             </ul>
           </div>
         </div>
