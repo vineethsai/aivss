@@ -1,9 +1,7 @@
-
 import React from 'react';
 import { Header } from '@/components/Header';
 import { Hero } from '@/components/Hero';
 import { AIVSSCalculator } from '@/components/AIVSSCalculator';
-import { OwaspTop10 } from '@/components/OwaspTop10';
 import { Footer } from '@/components/Footer';
 
 const Index = () => {
@@ -13,7 +11,6 @@ const Index = () => {
       <Hero />
       <div className="container mx-auto px-4 py-8 space-y-16">
         <AIVSSCalculator />
-        <OwaspTop10 />
       </div>
       <Footer />
     </div>
