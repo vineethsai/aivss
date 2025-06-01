@@ -17,7 +17,7 @@ export const Hero = () => {
           </p>
           <div className="grid md:grid-cols-3 gap-8 mt-12">
             <div className="bg-slate-800/50 backdrop-blur-sm p-6 rounded-lg border border-slate-700">
-              <img src="/owasp.png" alt="AIVSS Calculator" className="h-12 w-12 mb-4 mx-auto" />
+              <img src="/owasp-logo-dark.svg" alt="AIVSS Calculator" className="h-12 w-12 mb-4 mx-auto" />
               <h3 className="text-lg font-semibold text-white mb-2">AIVSS Calculator</h3>
               <p className="text-slate-300 text-sm">
                 Real-time vulnerability scoring with detailed metrics and impact assessment

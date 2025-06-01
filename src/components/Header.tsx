@@ -8,8 +8,8 @@ export const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <Link to="/" className="flex items-center space-x-2">
-            <img src="/owasp.png" alt="OWASP Logo" className="h-8 w-8" />
-            <span className="text-xl font-bold text-white">OWASP AIVSS</span>
+            <img src="/owasp-logo-dark.svg" alt="OWASP Logo" className="h-8 w-8" />
+            <span className="text-xl font-bold text-white">AIVSS Framework</span>
           </Link>
           <nav className="hidden md:flex items-center space-x-8">
             <Link to="/" className="text-slate-300 hover:text-white transition-colors">
