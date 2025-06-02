@@ -5,7 +5,7 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: mode === 'production' ? '/agentic-ai-prism-shield/' : '/',
+  base: mode === 'production' ? '/aivss/' : '/',
   build: {
     outDir: "docs",
   },
