@@ -27,6 +27,6 @@ echo "Pushing changes to remote..."
 git push origin main
 
 echo "Deploying to GitHub Pages..."
-npm run deploy
+# npm run deploy
 
 echo "Deployment complete!" 

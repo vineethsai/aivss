@@ -79,9 +79,9 @@ export const AIVSSCalculator = () => {
       }));
     } else {
       setFormData(prev => ({ ...prev, [field]: value }));
-    }
+        }
   };
-  
+
   const resetForm = () => {
     setFormData(initialFormState);
     setCalculatedScores(null);
@@ -268,16 +268,16 @@ export const AIVSSCalculator = () => {
                   </Select>
                 </div>
               ))}
-            </CardContent>
-          </Card>
-        </div>
+                </CardContent>
+              </Card>
+          </div>
 
         {/* Results and Graphs Column */}
         <div className="lg:col-span-2 space-y-6">
           <Card className="bg-indigo-600 text-white shadow-xl">
-            <CardHeader>
+              <CardHeader>
               <CardTitle className="text-xl text-center">Final AIVSS Score</CardTitle>
-            </CardHeader>
+              </CardHeader>
             <CardContent className="text-center pb-8">
               <p className="text-6xl font-bold my-2">
                 {calculatedScores ? calculatedScores.finalAivssScore.toFixed(1) : "0.0"}
@@ -290,10 +290,10 @@ export const AIVSSCalculator = () => {
                 }`}
               >
                 {calculatedScores ? calculatedScores.riskCategory : "None"} Risk
-              </Badge>
+                  </Badge>
             </CardContent>
           </Card>
-          
+                
           <Card className="bg-slate-800 border-slate-700 shadow-xl">
             <CardHeader><CardTitle className="text-lg text-slate-100">Score Breakdown</CardTitle></CardHeader>
             <CardContent className="space-y-3 text-sm text-slate-300">
@@ -358,10 +358,10 @@ export const AIVSSCalculator = () => {
                   </Bar>
                 </BarChart>
               </ResponsiveContainer>
-            </CardContent>
-          </Card>
+              </CardContent>
+            </Card>
+          </div>
         </div>
       </div>
-    </div>
   );
 }
