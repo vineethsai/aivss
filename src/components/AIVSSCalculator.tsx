@@ -6,7 +6,7 @@ import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Badge } from "@/components/ui/badge";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
-import { HelpCircle, Zap, RefreshCw } from "lucide-react";
+import { HelpCircle, Zap, RefreshCw, Download, FileText } from "lucide-react";
 import { ResponsiveContainer, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip as RechartsTooltip, Legend, PieChart, Pie, Cell, RadialBarChart, RadialBar, PolarAngleAxis } from 'recharts';
 
 // Configuration objects (can be moved to a shared util if used elsewhere)
@@ -191,6 +191,37 @@ export const AIVSSCalculator = () => {
           Reset Calculator
         </Button>
       </div>
+
+      {/* Reference Section */}
+      <Card className="bg-slate-800 border-slate-700 shadow-xl mb-6">
+        <CardHeader>
+          <CardTitle className="text-lg text-slate-100 flex items-center gap-2">
+            <FileText className="w-5 h-5" />
+            AIVSS Documentation & Resources
+          </CardTitle>
+        </CardHeader>
+        <CardContent>
+          <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center justify-between">
+            <div className="text-slate-300">
+              <p className="text-sm mb-1">
+                This calculator implements the <strong>AIVSS v0.5</strong> scoring methodology for OWASP Agentic AI Core Security Risks.
+              </p>
+              <p className="text-xs text-slate-400">
+                Download the complete specification document for detailed methodology and examples.
+              </p>
+            </div>
+            <a 
+              href="/AIVSS Scoring System For OWASP Agentic AI Core Security Risks v0.5.pdf" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-md text-sm font-medium transition-colors"
+            >
+              <Download className="w-4 h-4" />
+              Download AIVSS v0.5 PDF
+            </a>
+          </div>
+        </CardContent>
+      </Card>
 
       <div className="grid lg:grid-cols-3 gap-6">
         {/* Inputs Column */}

@@ -18,61 +18,28 @@ import { Alert, AlertDescription } from "@/components/ui/alert";
 
 const frameworkComponents = [
   {
-    name: "Base Metrics (CVSS-aligned)",
-    description: "Assessing fundamental exploitability using CVSS v3.1 metrics",
+    name: "Base Metrics (CVSS v3.1 aligned)",
+    description: "Traditional exploitability and impact assessment using established CVSS methodology",
     icon: Shield,
-    items: ["Attack Vector", "Attack Complexity", "Privileges Required", "User Interaction", "Scope"]
+    items: ["Attack Vector (AV)", "Attack Complexity (AC)", "Privileges Required (PR)", "User Interaction (UI)", "Scope (S)"]
   },
   {
-    name: "Agentic AI Top 10 Metric", 
-    description: "Quantifying severity of each OWASP Top 10 risk category",
+    name: "AIVSS Specific Severity", 
+    description: "Quantifying the severity of manifestation for each OWASP Agentic AI Core Security Risk",
     icon: Target,
-    items: ["Category-specific scoring", "Agent Characteristics Multiplier", "System-specific assessment"]
+    items: ["Risk category assessment (0.0-1.0)", "Agent Characteristics Multiplier (ACM)", "Context-specific evaluation"]
   },
   {
-    name: "Impact Metrics",
-    description: "Evaluating potential consequences across multiple dimensions",
+    name: "Impact Assessment",
+    description: "Comprehensive impact evaluation across multiple dimensions including societal consequences",
     icon: BarChart3,
-    items: ["Confidentiality Impact", "Integrity Impact", "Availability Impact", "Societal Impact"]
+    items: ["Confidentiality Impact (C)", "Integrity Impact (I)", "Availability Impact (A)", "Societal Impact (S)"]
   },
   {
-    name: "Environmental & Temporal",
-    description: "Contextualizing risk within deployment environment",
+    name: "Temporal & Environmental",
+    description: "Dynamic factors affecting vulnerability relevance and exploitability over time",
     icon: Layers,
-    items: ["Environmental requirements", "Temporal factors", "Mitigation effectiveness"]
-  }
-];
-
-const scoringGuidelines = [
-  {
-    range: "9.0-10.0",
-    category: "Critical",
-    color: "bg-red-500",
-    description: "Severe vulnerabilities requiring immediate attention"
-  },
-  {
-    range: "7.0-8.9", 
-    category: "High",
-    color: "bg-red-500",
-    description: "Significant risks that should be prioritized"
-  },
-  {
-    range: "4.0-6.9",
-    category: "Medium", 
-    color: "bg-orange-500",
-    description: "Moderate risks requiring mitigation planning"
-  },
-  {
-    range: "0.1-3.9",
-    category: "Low",
-    color: "bg-blue-500", 
-    description: "Lower priority risks with basic controls needed"
-  },
-  {
-    range: "0.0",
-    category: "None",
-    color: "bg-slate-400",
-    description: "No significant risk identified"
+    items: ["Exploit Code Maturity", "Remediation Level", "Report Confidence", "Environmental context"]
   }
 ];
 
@@ -83,16 +50,16 @@ const AivssMethodologyPage = () => {
       <main className="container mx-auto px-4 py-8">
         <div className="max-w-6xl mx-auto px-2 md:px-6 py-8">
           <div className="text-center mb-12">
-            <div className="inline-flex items-center gap-2 bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full text-sm font-medium mb-4">
+            <div className="inline-flex items-center gap-2 bg-indigo-500/20 text-indigo-300 px-4 py-2 rounded-full text-sm font-medium mb-4">
               <BookOpen className="w-4 h-4" />
-              AIVSS Framework Documentation
+              AIVSS v0.5 Framework Documentation
             </div>
             <h1 className="text-4xl font-bold text-white mb-4">
-              Methodology & Framework
+              AI Vulnerability Scoring System (AIVSS)
             </h1>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Understanding the AIVSS-Agentic scoring methodology for comprehensive 
-              security risk assessment of Agentic AI systems.
+              A specialized vulnerability scoring methodology for assessing security risks 
+              in OWASP Agentic AI Core Security vulnerabilities.
             </p>
           </div>
 
@@ -100,15 +67,15 @@ const AivssMethodologyPage = () => {
             <CardHeader>
               <CardTitle className="flex items-center gap-2 text-slate-100">
                 <Calculator className="w-5 h-5" />
-                AIVSS-Agentic Framework Overview
+                AIVSS Framework Overview
               </CardTitle>
             </CardHeader>
             <CardContent>
               <Alert className="mb-6 bg-slate-700/60 border-blue-500 text-slate-200">
                 <Info className="h-4 w-4 text-blue-400" />
                 <AlertDescription>
-                  AIVSS-Agentic extends proven vulnerability scoring principles, tailoring them specifically 
-                  to the nuances of the OWASP Agentic AI Top 10 vulnerabilities.
+                  AIVSS v0.5 extends CVSS v3.1 principles with additional metrics specifically designed 
+                  for OWASP Agentic AI Core Security Risks, incorporating agent characteristics and societal impact.
                 </AlertDescription>
               </Alert>
               
@@ -142,36 +109,36 @@ const AivssMethodologyPage = () => {
 
           <Card className="mb-12 bg-slate-800/50 border-slate-700">
             <CardHeader>
-              <CardTitle className="text-slate-100">AIVSS Scoring Formula</CardTitle>
+              <CardTitle className="text-slate-100">AIVSS v0.5 Scoring Formula</CardTitle>
             </CardHeader>
             <CardContent>
               <div className="bg-slate-900/70 p-6 rounded-lg font-mono text-sm mb-6 text-slate-200">
                 <div className="text-center mb-4 font-bold text-lg text-slate-100">
-                  AIVSS Score = min(10.0, [Base × w₁ + Agentic × w₂ + Impact × w₃] × TMM × MEM)
+                  AIVSS Score = min(10, [(w₁ × CVSS Base) + (w₂ × Agentic Specific) + (w₃ × Impact)] × Temporal × Mitigation)
                 </div>
                 <div className="grid md:grid-cols-3 gap-4 text-xs text-slate-300">
                   <div>
-                    <strong>Where:</strong>
+                    <strong>Core Components:</strong>
                     <ul className="mt-2 space-y-1">
-                      <li>Base = CVSS Base Score</li>
-                      <li>Agentic = Agentic AI Specific Score</li>
-                      <li>Impact = Impact Metrics Score</li>
+                      <li>CVSS Base = Traditional exploitability</li>
+                      <li>Agentic Specific = (Severity × ACM)</li>
+                      <li>Impact = Overall impact score (0-10)</li>
                     </ul>
                   </div>
                   <div>
-                    <strong>Weights:</strong>
+                    <strong>Default Weights:</strong>
                     <ul className="mt-2 space-y-1">
-                      <li>w₁ = 0.2 (Base)</li>
-                      <li>w₂ = 0.6 (Agentic)</li>
+                      <li>w₁ = 0.2 (CVSS Base)</li>
+                      <li>w₂ = 0.6 (Agentic Specific)</li>
                       <li>w₃ = 0.2 (Impact)</li>
                     </ul>
                   </div>
                   <div>
-                    <strong>Multipliers:</strong>
+                    <strong>Modifiers:</strong>
                     <ul className="mt-2 space-y-1">
-                      <li>TMM = Temporal Metrics</li>
-                      <li>MEM = Mitigation Effectiveness</li>
-                      <li>ACM = Agent Characteristics</li>
+                      <li>Temporal = Exploit maturity factor</li>
+                      <li>Mitigation = Effectiveness multiplier</li>
+                      <li>ACM = Agent Characteristics (1.0-2.0)</li>
                     </ul>
                   </div>
                 </div>
@@ -180,8 +147,8 @@ const AivssMethodologyPage = () => {
               <Alert className="bg-slate-700/60 border-orange-500 text-slate-200">
                 <AlertTriangle className="h-4 w-4 text-orange-400" />
                 <AlertDescription>
-                  The Agentic component receives the highest weighting (0.6) as it represents the 
-                  unique risks specific to autonomous AI systems that traditional scoring doesn't capture.
+                  The Agentic Specific component receives the highest weight (0.6) to emphasize the unique security 
+                  characteristics of autonomous AI systems that traditional CVSS scoring doesn't adequately capture.
                 </AlertDescription>
               </Alert>
             </CardContent>
@@ -189,23 +156,66 @@ const AivssMethodologyPage = () => {
 
           <Card className="mb-12 bg-slate-800/50 border-slate-700">
             <CardHeader>
-              <CardTitle className="text-slate-100">Risk Categories & Scoring Ranges</CardTitle>
+              <CardTitle className="text-slate-100">OWASP Agentic AI Core Security Risks</CardTitle>
             </CardHeader>
             <CardContent>
-              <div className="space-y-4">
-                {scoringGuidelines.map((guideline, index) => (
-                  <div key={index} className="flex items-center gap-4 p-4 border border-slate-700 rounded-lg bg-slate-800/70">
-                    <div className={`w-4 h-4 rounded ${guideline.color}`}></div>
-                    <div className="flex-1">
-                      <div className="flex items-center gap-3 mb-1">
-                        <span className="font-semibold text-slate-100">{guideline.category}</span>
-                        <Badge variant="outline" className="border-slate-500 text-slate-300">{guideline.range}</Badge>
-                      </div>
-                      <p className="text-sm text-slate-300">{guideline.description}</p>
-                    </div>
+              <p className="text-slate-300 mb-6">
+                AIVSS v0.5 is specifically designed to assess the following 10 core security risks 
+                identified by the OWASP Agentic AI Security Initiative:
+              </p>
+              <div className="grid md:grid-cols-2 gap-4">
+                <div className="space-y-3">
+                  <div className="flex items-center gap-3 p-3 bg-slate-800/70 rounded-lg">
+                    <span className="w-6 h-6 bg-red-600 text-white text-sm font-bold rounded flex items-center justify-center">1</span>
+                    <span className="text-slate-200 text-sm">Agent Authorization and Control Hijacking</span>
                   </div>
-                ))}
+                  <div className="flex items-center gap-3 p-3 bg-slate-800/70 rounded-lg">
+                    <span className="w-6 h-6 bg-red-600 text-white text-sm font-bold rounded flex items-center justify-center">2</span>
+                    <span className="text-slate-200 text-sm">Agent Critical Systems Interaction</span>
+                  </div>
+                  <div className="flex items-center gap-3 p-3 bg-slate-800/70 rounded-lg">
+                    <span className="w-6 h-6 bg-red-600 text-white text-sm font-bold rounded flex items-center justify-center">3</span>
+                    <span className="text-slate-200 text-sm">Agent Goal and Instruction Manipulation</span>
+                  </div>
+                  <div className="flex items-center gap-3 p-3 bg-slate-800/70 rounded-lg">
+                    <span className="w-6 h-6 bg-red-600 text-white text-sm font-bold rounded flex items-center justify-center">4</span>
+                    <span className="text-slate-200 text-sm">Agent Impact Chain and Blast Radius</span>
+                  </div>
+                  <div className="flex items-center gap-3 p-3 bg-slate-800/70 rounded-lg">
+                    <span className="w-6 h-6 bg-red-600 text-white text-sm font-bold rounded flex items-center justify-center">5</span>
+                    <span className="text-slate-200 text-sm">Agent Memory and Context Manipulation</span>
+                  </div>
+                </div>
+                <div className="space-y-3">
+                  <div className="flex items-center gap-3 p-3 bg-slate-800/70 rounded-lg">
+                    <span className="w-6 h-6 bg-orange-500 text-white text-sm font-bold rounded flex items-center justify-center">6</span>
+                    <span className="text-slate-200 text-sm">Agent Orchestration and Multi-Agent Exploitation</span>
+                  </div>
+                  <div className="flex items-center gap-3 p-3 bg-slate-800/70 rounded-lg">
+                    <span className="w-6 h-6 bg-orange-500 text-white text-sm font-bold rounded flex items-center justify-center">7</span>
+                    <span className="text-slate-200 text-sm">Agent Supply Chain and Dependency Attacks</span>
+                  </div>
+                  <div className="flex items-center gap-3 p-3 bg-slate-800/70 rounded-lg">
+                    <span className="w-6 h-6 bg-orange-500 text-white text-sm font-bold rounded flex items-center justify-center">8</span>
+                    <span className="text-slate-200 text-sm">Agent Untraceability and Accountability</span>
+                  </div>
+                  <div className="flex items-center gap-3 p-3 bg-slate-800/70 rounded-lg">
+                    <span className="w-6 h-6 bg-orange-500 text-white text-sm font-bold rounded flex items-center justify-center">9</span>
+                    <span className="text-slate-200 text-sm">Agent Checker Out of the Loop</span>
+                  </div>
+                  <div className="flex items-center gap-3 p-3 bg-slate-800/70 rounded-lg">
+                    <span className="w-6 h-6 bg-orange-500 text-white text-sm font-bold rounded flex items-center justify-center">10</span>
+                    <span className="text-slate-200 text-sm">Agent Alignment Faking</span>
+                  </div>
+                </div>
               </div>
+              <Alert className="mt-6 bg-slate-700/60 border-indigo-500 text-slate-200">
+                <Info className="h-4 w-4 text-indigo-400" />
+                <AlertDescription>
+                  Each risk category has specific assessment criteria and can be evaluated using the AIVSS calculator 
+                  to determine relative priority and mitigation planning.
+                </AlertDescription>
+              </Alert>
             </CardContent>
           </Card>
 
@@ -273,7 +283,7 @@ const AivssMethodologyPage = () => {
 
           <Card className="mb-12 bg-slate-800/50 border-slate-700">
             <CardHeader>
-              <CardTitle className="text-slate-100">Assessment Process</CardTitle>
+              <CardTitle className="text-slate-100">AIVSS Assessment Process</CardTitle>
             </CardHeader>
             <CardContent>
               <div className="grid md:grid-cols-3 gap-6">
@@ -281,9 +291,9 @@ const AivssMethodologyPage = () => {
                   <div className="w-12 h-12 bg-blue-500/20 rounded-xl flex items-center justify-center mx-auto mb-4">
                     <span className="text-xl font-bold text-blue-400">1</span>
                   </div>
-                  <h4 className="font-semibold mb-2 text-slate-100">System Assessment</h4>
+                  <h4 className="font-semibold mb-2 text-slate-100">Risk Identification</h4>
                   <p className="text-sm text-slate-300">
-                    Define system characteristics, operational context, and determine ACM multiplier
+                    Identify which of the 10 OWASP Agentic AI Core Security Risks apply to your system
                   </p>
                 </div>
                 
@@ -291,9 +301,9 @@ const AivssMethodologyPage = () => {
                   <div className="w-12 h-12 bg-green-500/20 rounded-xl flex items-center justify-center mx-auto mb-4">
                     <span className="text-xl font-bold text-green-400">2</span>
                   </div>
-                  <h4 className="font-semibold mb-2 text-slate-100">Vulnerability Scoring</h4>
+                  <h4 className="font-semibold mb-2 text-slate-100">AIVSS Scoring</h4>
                   <p className="text-sm text-slate-300">
-                    Evaluate each of the 10 vulnerability categories using CVSS metrics and impact assessment
+                    Apply AIVSS methodology using CVSS base metrics, agentic severity, and impact assessment
                   </p>
                 </div>
                 
@@ -303,8 +313,46 @@ const AivssMethodologyPage = () => {
                   </div>
                   <h4 className="font-semibold mb-2 text-slate-100">Risk Prioritization</h4>
                   <p className="text-sm text-slate-300">
-                    Generate prioritized risk profile and develop targeted remediation strategies
+                    Generate numerical scores to prioritize remediation efforts and resource allocation
                   </p>
+                </div>
+              </div>
+              
+              <div className="mt-8 p-6 bg-slate-900/50 rounded-lg">
+                <h4 className="font-semibold mb-4 text-slate-100">Key Assessment Considerations:</h4>
+                <div className="grid md:grid-cols-2 gap-4 text-sm text-slate-300">
+                  <div>
+                    <ul className="space-y-2">
+                      <li className="flex items-center gap-2">
+                        <CheckCircle className="w-4 h-4 text-green-400" />
+                        Agent autonomy level and decision-making scope
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <CheckCircle className="w-4 h-4 text-green-400" />
+                        System integration complexity and blast radius
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <CheckCircle className="w-4 h-4 text-green-400" />
+                        Potential societal and downstream impacts
+                      </li>
+                    </ul>
+                  </div>
+                  <div>
+                    <ul className="space-y-2">
+                      <li className="flex items-center gap-2">
+                        <CheckCircle className="w-4 h-4 text-green-400" />
+                        Traditional exploitability factors (CVSS)
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <CheckCircle className="w-4 h-4 text-green-400" />
+                        Environmental and temporal context
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <CheckCircle className="w-4 h-4 text-green-400" />
+                        Existing mitigation effectiveness
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </CardContent>
@@ -312,35 +360,57 @@ const AivssMethodologyPage = () => {
 
           <Card className="mb-12 bg-slate-800/50 border-slate-700">
             <CardHeader>
-              <CardTitle className="text-slate-100">Integration with Risk Management Frameworks</CardTitle>
+              <CardTitle className="text-slate-100">Documentation and Resources</CardTitle>
             </CardHeader>
             <CardContent className="text-slate-300">
               <p className="mb-6">
-                AIVSS-Agentic is designed to integrate seamlessly with existing enterprise risk management 
-                and cybersecurity frameworks, enhancing overall risk assessment capabilities.
+                AIVSS v0.5 provides a standardized approach to vulnerability assessment for Agentic AI systems, 
+                enabling consistent risk evaluation and comparison across different implementations and organizations.
               </p>
               
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
-                  <h4 className="font-semibold mb-3 text-slate-100">Compatible Frameworks:</h4>
+                  <h4 className="font-semibold mb-3 text-slate-100">Key Features:</h4>
                   <ul className="space-y-2 text-sm">
-                    <li>• NIST Cybersecurity Framework (CSF)</li>
-                    <li>• NIST AI Risk Management Framework</li>
-                    <li>• ISO/IEC 27001/27002</li>
-                    <li>• ISO/IEC 23894 (AI Risk Management)</li>
-                    <li>• Industry-specific regulations</li>
+                    <li>• Extends proven CVSS v3.1 methodology</li>
+                    <li>• Incorporates agent-specific characteristics</li>
+                    <li>• Includes societal impact assessment</li>
+                    <li>• Provides numerical scoring for prioritization</li>
+                    <li>• Supports risk communication and reporting</li>
                   </ul>
                 </div>
                 
                 <div>
-                  <h4 className="font-semibold mb-3 text-slate-100">Benefits:</h4>
+                  <h4 className="font-semibold mb-3 text-slate-100">Applications:</h4>
                   <ul className="space-y-2 text-sm">
-                    <li>• Consistent risk quantification</li>
-                    <li>• Improved resource allocation</li>
-                    <li>• Enhanced audit capabilities</li>
-                    <li>• Better stakeholder communication</li>
-                    <li>• Data-driven decision making</li>
+                    <li>• Security assessment and audit</li>
+                    <li>• Risk management and planning</li>
+                    <li>• Compliance and regulatory reporting</li>
+                    <li>• Resource allocation decisions</li>
+                    <li>• Stakeholder communication</li>
                   </ul>
+                </div>
+              </div>
+              
+              <div className="mt-8 p-6 bg-slate-900/50 rounded-lg">
+                <h4 className="font-semibold mb-4 text-slate-100">Get Started with AIVSS:</h4>
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <a 
+                    href="/AIVSS Scoring System For OWASP Agentic AI Core Security Risks v0.5.pdf" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-6 py-3 bg-slate-700 hover:bg-slate-600 text-slate-200 rounded-lg font-medium transition-colors"
+                  >
+                    <BookOpen className="w-5 h-5" />
+                    Download Full Methodology (PDF)
+                  </a>
+                  <a 
+                    href="/"
+                    className="inline-flex items-center gap-2 px-6 py-3 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg font-medium transition-colors"
+                  >
+                    <Calculator className="w-5 h-5" />
+                    Use AIVSS Calculator
+                  </a>
                 </div>
               </div>
             </CardContent>
