@@ -211,7 +211,7 @@ export const AIVSSCalculator = () => {
               </p>
             </div>
             <a 
-              href="/AIVSS Scoring System For OWASP Agentic AI Core Security Risks v0.5.pdf" 
+                              href="./AIVSS Scoring System For OWASP Agentic AI Core Security Risks v0.5.pdf" 
               target="_blank" 
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-md text-sm font-medium transition-colors"

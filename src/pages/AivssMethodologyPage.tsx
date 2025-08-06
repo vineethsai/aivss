@@ -396,7 +396,7 @@ const AivssMethodologyPage = () => {
                 <h4 className="font-semibold mb-4 text-slate-100">Get Started with AIVSS:</h4>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <a 
-                    href="/AIVSS Scoring System For OWASP Agentic AI Core Security Risks v0.5.pdf" 
+                    href="./AIVSS Scoring System For OWASP Agentic AI Core Security Risks v0.5.pdf" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 px-6 py-3 bg-slate-700 hover:bg-slate-600 text-slate-200 rounded-lg font-medium transition-colors"

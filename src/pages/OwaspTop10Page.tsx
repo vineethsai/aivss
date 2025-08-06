@@ -447,7 +447,7 @@ const OwaspTop10Page = () => {
               <span>Based on AIVSS v0.5 Methodology</span>
               <span>•</span>
               <a 
-                href="/AIVSS Scoring System For OWASP Agentic AI Core Security Risks v0.5.pdf" 
+                href="./AIVSS Scoring System For OWASP Agentic AI Core Security Risks v0.5.pdf" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-indigo-400 hover:text-indigo-300 underline"
@@ -674,7 +674,7 @@ const OwaspTop10Page = () => {
                     <div className="pt-4 border-t border-slate-700">
                       <div className="flex flex-col sm:flex-row gap-3">
                         <a 
-                          href="/AIVSS Scoring System For OWASP Agentic AI Core Security Risks v0.5.pdf" 
+                          href="./AIVSS Scoring System For OWASP Agentic AI Core Security Risks v0.5.pdf" 
                           target="_blank" 
                           rel="noopener noreferrer"
                           className="inline-flex items-center gap-2 px-4 py-2 bg-slate-700 hover:bg-slate-600 text-slate-200 rounded-md text-sm font-medium transition-colors"
@@ -766,7 +766,7 @@ const OwaspTop10Page = () => {
                     </p>
                     <div className="flex gap-3">
                       <a 
-                        href="/AIVSS Scoring System For OWASP Agentic AI Core Security Risks v0.5.pdf" 
+                        href="./AIVSS Scoring System For OWASP Agentic AI Core Security Risks v0.5.pdf" 
                         target="_blank" 
                         rel="noopener noreferrer"
                         className="inline-flex items-center gap-2 px-4 py-2 bg-slate-700 hover:bg-slate-600 text-slate-200 rounded-md text-sm font-medium transition-colors"
