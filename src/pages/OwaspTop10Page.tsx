@@ -437,7 +437,7 @@ const OwaspTop10Page = () => {
               OWASP Agentic AI Core Security Risks
             </div>
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-4"> {/* Adjusted style */}
-              Top 10 Security Risks
+              Top Risks
             </h1>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed mb-6"> {/* Adjusted style */}
               The most critical vulnerabilities specific to Agentic AI systems, providing a focused lens for 
@@ -457,11 +457,11 @@ const OwaspTop10Page = () => {
             </div>
           </div>
 
-          {/* Top 10 List */}
+          {/* Top Risks List */}
           <div className="space-y-6">
             <div className="text-center mb-8">
               <h2 className="text-2xl font-bold text-white mb-2"> {/* Adjusted style */}
-                OWASP Agentic AI Top 10 Vulnerabilities
+                OWASP Agentic AI Core Security Risks
               </h2>
               <p className="text-slate-300"> {/* Adjusted style */}
                 Ranked by severity and prevalence in Agentic AI systems

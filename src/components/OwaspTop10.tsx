@@ -113,7 +113,7 @@ export const OwaspTop10 = () => {
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-white mb-4 flex items-center justify-center gap-2">
             <AlertTriangle className="h-8 w-8 text-orange-400" />
-            OWASP Top 10 for Agentic AI (2024)
+            OWASP Top Risks for Agentic AI (2025)
           </h2>
           <p className="text-slate-300 text-lg max-w-3xl mx-auto">
             The most critical security risks in agentic AI systems, identified through industry research and expert consensus
@@ -164,7 +164,7 @@ export const OwaspTop10 = () => {
         <div className="mt-12 bg-slate-800/30 border border-slate-700 rounded-lg p-6">
           <h3 className="text-white text-xl font-semibold mb-4">About This Classification</h3>
           <p className="text-slate-300 mb-4">
-            This OWASP Top 10 for Agentic AI represents the most critical security risks specifically affecting 
+            These OWASP Top Risks for Agentic AI represent the most critical security risks specifically affecting 
             autonomous AI systems. Unlike traditional AI applications, agentic AI systems can make decisions 
             and take actions independently, creating unique security challenges that require specialized assessment.
           </p>

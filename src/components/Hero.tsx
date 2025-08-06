@@ -25,7 +25,7 @@ export const Hero = () => {
             </div>
             <div className="bg-slate-800/50 backdrop-blur-sm p-6 rounded-lg border border-slate-700">
               <AlertTriangle className="h-12 w-12 text-orange-400 mb-4 mx-auto" />
-              <h3 className="text-lg font-semibold text-white mb-2">OWASP Top 10</h3>
+              <h3 className="text-lg font-semibold text-white mb-2">Top Risks</h3>
               <p className="text-slate-300 text-sm">
                 Critical security risks specifically designed for agentic AI systems
               </p>

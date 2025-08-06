@@ -16,7 +16,7 @@ export const Header = () => {
               Calculator
             </Link>
             <Link to="/owasp-top-10" className="text-slate-300 hover:text-white transition-colors">
-              OWASP Top 10
+              Top Risks
             </Link>
             <Link to="/aivss-methodology" className="text-slate-300 hover:text-white transition-colors">
               Methodology

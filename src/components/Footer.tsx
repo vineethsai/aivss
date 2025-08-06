@@ -19,6 +19,9 @@ export const Footer = () => {
           <div>
             <h3 className="text-white font-semibold mb-4">Resources</h3>
             <ul className="space-y-2 text-slate-400 text-sm">
+              <li><a href="https://aivss.owasp.org" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors flex items-center gap-1">
+                AIVSS OWASP Page <ExternalLink className="h-3 w-3" />
+              </a></li>
               <li><a href="https://owasp.org/www-project-artificial-intelligence-vulnerability-scoring-system/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Documentation</a></li>
             </ul>
           </div>
@@ -45,7 +48,7 @@ export const Footer = () => {
         
         <div className="border-t border-slate-700 mt-8 pt-8 text-center">
           <p className="text-slate-400 text-sm">
-            © 2024 AIVSS Framework. Licensed under Creative Commons. 
+            © 2025 AIVSS Framework. Licensed under Creative Commons. 
             Built for the global AI security community.
           </p>
         </div>
